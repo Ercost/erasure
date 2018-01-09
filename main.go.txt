@@ -1,0 +1,31 @@
+package main
+
+import "C"
+import (
+        erasure "./erasure"
+       "fmt"
+       "os"
+)
+
+func init() {
+  fmt.Println("cgo")
+  os.Setenv("GODEBUG", "cgocheck=0")
+}
+
+
+
+func main() {
+   var bytes []byte
+
+   bytes =make([]byte, 2048, 2048)
+
+   fmt.Println(len(bytes))
+   params, _ := erasure.ParseEncoderParams(10, 5, erasure.Cauchy)
+   encoder := erasure.NewEncoder(params)
+
+   encodedData, length := encoder.Encode(bytes)
+   fmt.Println(len(encodedData), length)
+
+// Creating and using a decoder
+
+}
