@@ -1,6 +1,7 @@
 ## Introduction
 
 Erasure is an open source Golang library written on top of ISAL (Intel Intelligent Storage Library) released under [Apache license v2](./LICENSE)
+We Kishori Konwar and Prakash Narayana Moorthy have slightly modified this code to fix some memory leaks
 
 ### Developers
 * [Get Source](./CONTRIBUTING.md)
